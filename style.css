@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    background-color: #e8e8e6;
+    color: #1a1a1a;
+    font-family: Lora, Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header: logo on the left, menu on the right (flexbox) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.logo {
+    display: block;
+    width: 110px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #1a1a1a;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 32px 0 16px;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+h2 {
+    margin: 0 0 16px;
+    color: #555555;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 28px;
+    text-align: right;
+}
+
+.intro {
+    max-width: 720px;
+    margin-bottom: 32px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+/* Home: masonry photo grid, 4 columns */
+.photogrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+/* Big photos take 2 columns and 2 rows */
+.photogrid .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+figure {
+    margin: 0;
+}
+
+.photogrid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid #1a1a1a;
+    box-sizing: border-box;
+}
+
+/* Story: photo on the left, text on the right */
+.story {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.story img {
+    width: 100%;
+    border: 3px solid #1a1a1a;
+    box-sizing: border-box;
+}
+
+.story p {
+    text-align: justify;
+}
+
+footer {
+    padding: 24px 0;
+    border-top: 2px solid #1a1a1a;
+    font-family: Oswald, Arial, sans-serif;
+}
+
+.social {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.social a {
+    color: #555555;
+    font-size: 24px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .photogrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    h2 {
+        text-align: left;
+    }
+
+    .story p {
+        text-align: left;
+    }
+}
